@@ -15,7 +15,7 @@ namespace SensorGame.SensorFile
             this.Type = type;
         }
 
-        public void Activate(Dictionary<string, int> attachedSensors)
+        public virtual void Activate(Dictionary<string, int> attachedSensors)
         {
             if (attachedSensors.ContainsKey(this.Type))
             {

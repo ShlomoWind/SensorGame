@@ -20,12 +20,19 @@ namespace SensorGame.ManagerFile
         public void StartGame()
         {
             Console.WriteLine("Game started! Agent rank: " + Agent.Rank);
+            Console.WriteLine("=====");
+            Console.WriteLine("Available sensor types: Light, Motion, Thermal, Audio, Signal, Magnetic, Pulse.");
             while (!this.Agent.IsRevealed())
             {
-                Console.WriteLine("=================================================");
+                Console.WriteLine("\n=================================================");
                 Console.WriteLine("Enter sensor type to attach: ");
                 string SensorInput = Console.ReadLine();
-                Sensor sensor = new Sensor(SensorInput);
+                Sensor sensor = SensorFactory.CreateSensor(SensorInput);
+                if (sensor == null)
+                {
+                    Console.WriteLine("Invalid sensor type. Please try again.");
+                    continue;
+                }
                 sensor.Activate(this.Agent.AttachedSensors);
                 int MatchesNumber = this.Agent.Investigation();
                 Console.WriteLine($"\nNumber of matches so far: {MatchesNumber}/3");
