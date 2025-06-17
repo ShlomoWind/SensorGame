@@ -22,6 +22,7 @@ namespace SensorGame.ManagerFile
             Console.WriteLine("Game started! Agent rank: " + Agent.Rank);
             while (!this.Agent.IsRevealed())
             {
+                Console.WriteLine("=================================================");
                 Console.WriteLine("Enter sensor type to attach: ");
                 string SensorInput = Console.ReadLine();
                 Sensor sensor = new Sensor(SensorInput);
@@ -29,7 +30,8 @@ namespace SensorGame.ManagerFile
                 int MatchesNumber = this.Agent.Investigation();
                 Console.WriteLine($"\nNumber of matches so far: {MatchesNumber}/3");
             }
-            Console.WriteLine("\n\nAgent is revealed!\n");
+            Console.WriteLine("\n\nAgent is revealed!");
+            Console.WriteLine("***********************\n");
         }
     }
 }
