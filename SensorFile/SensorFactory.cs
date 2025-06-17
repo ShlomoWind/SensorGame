@@ -14,6 +14,18 @@ namespace SensorGame.SensorFile
             {
                 case "light":
                     return new SensorLight();
+                case "audio":
+                    return new SensorAudio();
+                case "thermal":
+                    return new SensorThermal();
+                case "motion":
+                    return new SensorMotion();
+                case "signal":
+                    return new SensorSignal();
+                case "magnetic":
+                    return new SensorMagnetic();
+                case "pulse":
+                    return new SensorPulse();
                 default:
                     return null;
             }
