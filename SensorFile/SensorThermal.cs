@@ -9,10 +9,5 @@ namespace SensorGame.SensorFile
     internal class SensorThermal : Sensor
     {
         public SensorThermal() : base("Thermal") { }
-        public override void Activate(Dictionary<string, int> attachedSensors)
-        {
-            Console.WriteLine("Sensor Thermal is activated!");
-            base.Activate(attachedSensors);
-        }
     }
 }
