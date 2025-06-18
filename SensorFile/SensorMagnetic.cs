@@ -9,10 +9,5 @@ namespace SensorGame.SensorFile
     internal class SensorMagnetic : Sensor
     {
         public SensorMagnetic() : base("Magnetic") { }
-        public override void Activate(Dictionary<string, int> attachedSensors)
-        {
-            Console.WriteLine("Sensor Magnetic is activated!");
-            base.Activate(attachedSensors);
-        }
     }
 }

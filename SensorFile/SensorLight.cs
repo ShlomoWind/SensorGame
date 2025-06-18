@@ -9,10 +9,5 @@ namespace SensorGame.SensorFile
     internal class SensorLight: Sensor
     {
         public SensorLight() : base("Light") { }
-        public override void Activate(Dictionary<string, int> attachedSensors)
-        {
-            Console.WriteLine("Sensor Light is activated!");
-            base.Activate(attachedSensors);
-        }
     }
 }
